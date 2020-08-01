@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap-rtl.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- datepicker -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <!-- font-family -->
+    <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
+    <!-- custom style -->
+    <link rel="stylesheet" href="css/custome.css?x=10">
+    <style>
+        :root{
+            --mainColor:#26606af0;
+        }
+    </style>
+    
+</head>
+<body dir="rtl" class="">
+    <header>
+        <div class="overlay">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <div class="container">
+                    <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">الرئيسيه <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">الرحلات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="details.html">الفنادق</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">الخدمات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">المدونه</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">عنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">الاتصال بنا</a>
+                    </li>
+                  
+                    </ul>
+                </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="details pt-5 trip_info">
+        <div class="container pb-5">
+            <div class="row">
+                <div class="col-lg-3 p-0 my-3">
+                    <ul class="list-unstyled listed-info">
+                        <li class="py-2 list-active" ><a class="text-white" href="#general">معلومات عامه</a></li>
+                        <li class="py-2"><a class="text-white" href="#hotels">الفندق</a></li>
+                        <li class="py-2"><a class="text-white" href="#flight">الطيران</a></li>
+                        <li class="py-2">التاريخ</li>
+                        <li class="py-2">معلومات عامه</li>
+                        <li class="py-2">الفندق</li>
+                        <li class="py-2">الطيران</li>
+                        <li class="py-2">التاريخ</li>  
+                    </ul>
+                    <div class="bg-white px-2 py-3 mt-3" style="border:10px solid #E9E6E0 ; border-right: 0;"> 
+                        <h4>عرض اليوم</h4>
+                        <hr>
+                        <img src="img/hotel2.jpg" class="w-100" alt="">
+                        <div class="d-flex ">
+                            <p class="col-md-6 p-0 font-weight-bolder m-0">فندق بلازا </p>
+                            <div class="col-md-6 p-0">
+                                <span class="text-warning"><i class="fa fa-star"></i></span>
+                                <span class="text-warning"><i class="fa fa-star"></i></span>
+                                <span class="text-warning"><i class="fa fa-star"></i></span>
+                                <span class="text-warning"><i class="fa fa-star"></i></span>
+                                <span class="text-warning"><i class="fa fa-star"></i></span>       
+                            </div>
+                        </div>
+                        <p>من 1000 جنيه / الليله</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 p-0 tours" style="height: fit-content;">
+                    <div class="mt-4 tour-item bg-white py-3 px-2" id="general">
+                        <h2 class="py-3 px-2">لندن</h2>
+                        <div class="details-line"></div>
+                        <div class="details-img">
+                            <img src="img/london1.jpg" alt="" class="w-100 my-5 h-75">
+                        </div>
+                        <h4 class="font-weight-bold">لندن مدينة متنوعة ومثيرة مع بعض من أفضل المعالم السياحية في العالم</h4>
+                        <h6>في لندن يمكنك ان تفحص بعض أثمن كنوز العالم في المتحف البريطاني أو تجتمع مع الديناصورات وجهاً لوجه في متحف التاريخ الطبيعي.</h6>
+                        <div class="trip-desc">
+                            <table class="table mt-5" >
+                                <thead>
+                                  <tr>
+                                    <th class="">البلد</th>
+                                    <td>انجلترا</td>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th class="">اللغه الرسميه</th>
+                                    <td>الانجليزيه</td>
+                                </tr>
+                                <tr>
+                                    <th class="">العمله</th>
+                                    <td>الجنيه الانجليزي</td>
+                                </tr>
+                                <tr>
+                                    <th class="">اللغه الرسميه</th>
+                                    <td>الانجليزيه</td>
+                                </tr>
+                                <tr>
+                                    <th class="">العمله</th>
+                                    <td>الجنيه الانجليزي</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tour-item p-0  " id="hotels" >
+                        <div class="d-flex flex-wrap bg-white py-3 px-1">
+                            <div class="col-lg-4 col-md-12">
+                                <img src="img/hotel2.jpg" class="w-100 h-100" alt="">
+                            </div>
+                            <div class="col-lg-5 col-md-12">
+                                <div class="d-flex flex-wrap p-0">
+                                    <p class="col-md-6 p-0 font-weight-bolder m-0">فندق بلازا </p>
+                                    <div class="col-md-6 d-flex justify-content-end p-0">
+                                        <span class="text-warning"><i class="fa fa-star"></i></span>
+                                        <span class="text-warning"><i class="fa fa-star"></i></span>
+                                        <span class="text-warning"><i class="fa fa-star"></i></span>
+                                        <span class="text-warning"><i class="fa fa-star"></i></span>
+                                        <span class="text-warning"><i class="fa fa-star"></i></span>       
+                                    </div>
+                                </div>
+                                <p>من 1000 جنيه / الليله</p>
+                                <hr>
+                                <p>140،000 فندق حول العالم 130+ خطوط جوية أكثر من 2 مليون رأي</p>
+                            </div>
+                            <div class="tour-line" style="height: 150px; width: 1px; background-color: #d9d7d7; margin-left: 11px;"></div>
+                            <div class="col-lg-2 col-md-12 text-center pl-0">
+                                <p> سعر الغرفه لليله واحده تبدا من <br><span class="font-weight-bolder">200 جنيه</span></p>
+                                <button type="" class="w-100 btn text-white"  style=" background-color: var(--mainColor);">احجز الان</button>
+
+                            </div>
+                        </div>
+                        <div class="d-flex flex-wrap mt-2 bg-white py-3 px-1">
+                            <div class="col-lg-4 col-md-12">
+                                <img src="img/hotel3.jpg" class="w-100 h-100" alt="">
+                            </div>
+                            <div class="col-lg-5 col-md-12">
+                                <div class="d-flex flex-wrap p-0">
+                                    <p class="col-md-6 p-0 font-weight-bolder m-0">فندق بلازا </p>
+                                    <div class="col-md-6 d-flex justify-content-end p-0">
+                                        <span class="text-warning"><i class="fa fa-star"></i></span>
+                                        <span class="text-warning"><i class="fa fa-star"></i></span>
+                                        <span class="text-warning"><i class="fa fa-star"></i></span>
+                                        <span class="text-warning"><i class="fa fa-star"></i></span>
+                                        <span class="text-warning"><i class="fa fa-star"></i></span>       
+                                    </div>
+                                </div>
+                                <p>من 1000 جنيه / الليله</p>
+                                <hr>
+                                <p>140،000 فندق حول العالم 130+ خطوط جوية أكثر من 2 مليون رأي</p>
+                            </div>
+                            <div class="tour-line" style="height: 150px; width: 1px; background-color: #d9d7d7; margin-left: 11px;"></div>
+                            <div class="col-lg-2 col-md-12 text-center pl-0">
+                                <p> سعر الغرفه لليله واحده تبدا من <br><span class="font-weight-bolder">200 جنيه</span></p>
+                                <button type="" class="w-100 btn text-white"  style=" background-color: var(--mainColor);">احجز الان</button>
+
+                            </div>
+                        </div>
+                        <div class="d-flex flex-wrap mt-2 bg-white py-3 px-1">
+                            <div class="col-lg-4 col-md-12">
+                                <img src="img/hotel5.jpg" class="w-100 h-100" alt="">
+                            </div>
+                            <div class="col-lg-5 col-md-12">
+                                <div class="d-flex flex-wrap p-0">
+                                    <p class="col-md-6 p-0 font-weight-bolder m-0">فندق بلازا </p>
+                                    <div class="col-md-6 d-flex justify-content-end p-0">
+                                        <span class="text-warning"><i class="fa fa-star"></i></span>
+                                        <span class="text-warning"><i class="fa fa-star"></i></span>
+                                        <span class="text-warning"><i class="fa fa-star"></i></span>
+                                        <span class="text-warning"><i class="fa fa-star"></i></span>
+                                        <span class="text-warning"><i class="fa fa-star"></i></span>       
+                                    </div>
+                                </div>
+                                <p>من 1000 جنيه / الليله</p>
+                                <hr>
+                                <p>140،000 فندق حول العالم 130+ خطوط جوية أكثر من 2 مليون رأي</p>
+                            </div>
+                            <div class="tour-line" style="height: 150px; width: 1px; background-color: #d9d7d7; margin-left: 11px;"></div>
+                            <div class="col-lg-2 col-md-12 text-center pl-0">
+                                <p> سعر الغرفه لليله واحده تبدا من <br><span class="font-weight-bolder">200 جنيه</span></p>
+                                <button type="" class="w-100 btn text-white"  style=" background-color: var(--mainColor);">احجز الان</button>
+
+                            </div>
+                        </div>
+                        <div class="d-flex flex-wrap mt-2 bg-white py-3 px-1">
+                            <div class="col-lg-4 col-md-12">
+                                <img src="img/hotel5.jpg" class="w-100 h-100" alt="">
+                            </div>
+                            <div class="col-lg-5 col-md-12">
+                                <div class="d-flex flex-wrap p-0">
+                                    <p class="col-md-6 p-0 font-weight-bolder m-0">فندق بلازا </p>
+                                    <div class="col-md-6 d-flex justify-content-end p-0">
+                                        <span class="text-warning"><i class="fa fa-star"></i></span>
+                                        <span class="text-warning"><i class="fa fa-star"></i></span>
+                                        <span class="text-warning"><i class="fa fa-star"></i></span>
+                                        <span class="text-warning"><i class="fa fa-star"></i></span>
+                                        <span class="text-warning"><i class="fa fa-star"></i></span>       
+                                    </div>
+                                </div>
+                                <p>من 1000 جنيه / الليله</p>
+                                <hr>
+                                <p>140،000 فندق حول العالم 130+ خطوط جوية أكثر من 2 مليون رأي</p>
+                            </div>
+                            <div class="tour-line" style="height: 150px; width: 1px; background-color: #d9d7d7; margin-left: 11px;"></div>
+                            <div class="col-lg-2 col-md-12 text-center pl-0">
+                                <p> سعر الغرفه لليله واحده تبدا من <br><span class="font-weight-bolder">200 جنيه</span></p>
+                                <button type="" class="w-100 btn text-white"  style=" background-color: var(--mainColor);">احجز الان</button>
+
+                            </div>
+                        </div>   
+                        <nav aria-label="Page navigation example " class="mt-4 d-flex justify-content-center">
+                            <ul class="pagination">
+                              <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                  <span aria-hidden="true">«</span>
+                                  <span class="sr-only">Previous</span>
+                                </a>
+                              </li>
+                              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                              <li class="page-item"><a class="page-link" href="#">2</a></li>
+                              <li class="page-item"><a class="page-link" href="#">3</a></li>
+                              <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                  <span aria-hidden="true">»</span>
+                                  <span class="sr-only">Next</span>
+                                </a>
+                              </li>
+                            </ul>
+                        </nav>      
+                    </div>
+                </div>
+                <div class="col-lg-3 my-3 tour">
+                    <div class="bg-white px-2 py-3">
+                        <h4>للاستفسار عن الحجز</h4>
+                        <hr>
+                        <p>اتصل بفريق خدمة العملاء على الرقم التالي للتحدث إلى أحد مستشارينا الذين سيساعدونك في جميع احتياجات عطلتك.</p>
+                        <span class=" ml-2 font-weight-bold"> 1-555-555-55<i class="fa fa-phone-alt m-1"></i></span>
+                    </div>
+                    <div class="bg-white px-2 py-3 mt-3">
+                        <h4>لماذا نحن</h4>
+                        <hr>
+                        <h5>اسعارنا</h5>
+                        <p>حصل على أفضل الأسعار أو استرد النقود بدون رسوم حجز. ,وفر المال</p>
+                        <h5 class="mt-2">افضل اختيار</h5>
+                        <p>140،000 فندق حول العالم 130+ خطوط جوية أكثر من 2 مليون رأي</p>
+                        <h5 class="mt-2">نحن دائما هنا</h5>
+                        <p> تصل بنا أو راسلنا عبر البريد الإلكتروني في أي وقت احصل على دعم على مدار 24 ساعة قبل وأثناء وبعد رحلتك</p>
+                    </div>
+                    <div class="bg-white px-2 py-3 mt-3">
+                        <h4>افضل الفنادق</h4>
+                        <hr>
+                        <div class="d-flex p-0">
+                            <p class="col-md-6 p-0 font-weight-bolder m-0">فندق بلازا </p>
+                            <div class="col-md-6 p-0">
+                                <span class="text-warning"><i class="fa fa-star"></i></span>
+                                <span class="text-warning"><i class="fa fa-star"></i></span>
+                                <span class="text-warning"><i class="fa fa-star"></i></span>
+                                <span class="text-warning"><i class="fa fa-star"></i></span>
+                                <span class="text-warning"><i class="fa fa-star"></i></span>       
+                            </div>
+                        </div>
+                        <p>من 1000 جنيه / الليله</p>
+                        <hr>
+                        <div class="d-flex p-0">
+                            <p class="col-md-6 p-0 font-weight-bolder m-0">فندق بلازا </p>
+                            <div class="col-md-6 p-0">
+                                <span class="text-warning"><i class="fa fa-star"></i></span>
+                                <span class="text-warning"><i class="fa fa-star"></i></span>
+                                <span class="text-warning"><i class="fa fa-star"></i></span>
+                                <span class="text-warning"><i class="fa fa-star"></i></span>
+                                <span class="text-warning"><i class="fa fa-star"></i></span>       
+                            </div>
+                        </div>
+                        <p>من 1000 جنيه / الليله</p>
+                        <hr>
+                        <div class="d-flex p-0">
+                            <p class="col-md-6 p-0 font-weight-bolder m-0">فندق بلازا </p>
+                            <div class="col-md-6 p-0">
+                                <span class="text-warning"><i class="fa fa-star"></i></span>
+                                <span class="text-warning"><i class="fa fa-star"></i></span>
+                                <span class="text-warning"><i class="fa fa-star"></i></span>
+                                <span class="text-warning"><i class="fa fa-star"></i></span>
+                                <span class="text-warning"><i class="fa fa-star"></i></span>       
+                            </div>
+                        </div>
+                        <p>من 1000 جنيه / الليله</p>
+                        <hr>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-6 col-md-12 mb-3">
+                    <h4 class="font-weight-bolder mb-4"> احجز رحلتك </h4>
+                    <p><span><i class="fas fa-phone"></i> :</span> 0106677786 </p>
+                    <p><span><i class="fas fa-map-marker-alt"></i> :</span> القاهره-العنوان </p>
+                    <p><span><i class="fas fa-envelope"></i> :</span>booking@mail.com</p>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-12 mb-3">
+                    <h4 class="font-weight-bolder mb-4"> خدمة العملاء </h4>
+                    <ul>
+                        <li><a href="">التعليمات</a></li>
+                        <li><a href="">كيف اقوم بالدفع ؟</a></li>
+                        <li><a href=""> خيارات الدفع</a></li>
+                        <li><a href=""> نصائح الحجز</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-12 mb-3">
+                    <h4 class="font-weight-bolder mb-4">تابعنا </h4>
+                    <ul class="follow d-flex">
+                        <li><a href="" title="facebook"><span class="mr-2"><i class="fab fa-facebook-f"></i></span></a></li>
+                        <li><a href="" title="Gplus"><span class="mr-2"><i class="fab fa-google-plus-g"></i></span></a></li>
+                        <li><a href="" title="linkedin"><span class="mr-2"><i class="fab fa-linkedin-in"></i></span></a></li>
+                        <li><a href="" title="twittter"><span class="mr-2"><i class="fab fa-twitter"></i></span></a></li>
+                        <li><a href="" title="whatsapp"><span class="mr-2"><i class="fab fa-whatsapp"></i></span></a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-12 mb-3">
+                    <h4 class="font-weight-bolder mb-4">لا تفوت عروضنا الحصرية</h4>
+                    <form class="sign">
+                        <input type="text" placeholder="ادخل البريد الالكتروني">
+                        <button type="submit">تسجيل</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <!-- datepicker -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- custome.js -->
+    <script src="js/custome.js?x=10"></script>
+
+</body>
+</html>

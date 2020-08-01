@@ -1,0 +1,451 @@
+/* ======GLOBAL STYLING ========== */
+:root{
+    /* --mainColor:#6a2642f0; */
+    --mainColor:#679da7f0;
+    --s-color:#2C2E3E;
+    --th-color:#373547;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Cairo', sans-serif;
+    background-color: #E9E6E0;
+}
+.cyan{
+    background-color: var(--mainColor);
+}
+.text-dark {
+    color: #777b7e!important;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+.m_color{
+    color: var(--mainColor);
+}
+/* ======= index =========== */
+header{
+    background-image: url("../img/photo-1512470876302-972faa2aa9a4.jfif");
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+header .overlay{
+    background-color: rgba(0,0,0,0.3);
+    height: 70vh;
+}
+nav{
+    background-color: transparent;
+    border-bottom: 1px solid white;
+   
+}
+nav a {
+    color: white!important;
+}
+section.form{
+    background-color: var(--s-color);
+}
+.form select, select option{
+    background-color: var(--th-color);
+    border: var(--th-color);
+    color: white;
+}
+select option:hover {
+    background-color: var(--s-color)!important;
+}
+.form .duration input{
+    width: 49%;
+    background-color: var(--th-color);
+    border: 1px solid var(--th-color);
+    padding: 2px 5px;
+}
+
+/*------------ price slider -------- */
+input[type=range] {
+    -webkit-appearance: none;
+    margin: 18px 0;
+    width: 100%;
+  }
+  
+  input[type=range]:focus {
+    outline: none;
+  }
+  
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: var(--th-color);
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+    padding: 10px 0;
+
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: var(--th-color);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -17px;
+  }
+.range-slider {
+  position: relative;
+  color: white;
+}
+.range-slider input[type="range"] {
+    position: absolute;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    border: none;
+    background: #F1EFEF;
+    box-shadow: inset 0 1px 0 0 #cdc6c6, inset 0 -1px 0 0 #d9d4d4;
+    -webkit-box-shadow: inset 0 1px 0 0 #cdc6c6, inset 0 -1px 0 0 #d9d4d4;
+    left: 10px;
+    top: 45px;
+    width: 92%;
+    outline: none;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+}
+.range-slider input[type="range"]::-webkit-slider-thumb {
+  pointer-events: all;
+  position: relative;
+  z-index: 1;
+  width: 15px;
+  height: 35px;
+  border: 1px solid rgb(51, 50, 50);
+  /* W3C */
+}
+.range-slider input[type="range"]::-moz-range-thumb {
+  pointer-events: all;
+  position: relative;
+  z-index: 10;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 14px;
+  /* W3C */
+}
+.range-slider input[type="range"]::-ms-thumb {
+  pointer-events: all;
+  position: relative;
+  z-index: 10;
+  -ms-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 14px;
+  border: 0;
+  /* W3C */
+}
+.range-slider input[type=range]::-moz-range-track {
+  position: relative;
+  z-index: -1;
+  background-color: black;
+  border: 0;
+}
+.range-slider input[type=range]:last-of-type::-moz-range-track {
+  -moz-appearance: none;
+  background: none transparent;
+  border: 0;
+}
+.range-slider input[type=range]::-moz-focus-outer {
+  border: 0;
+}
+  /* --------- price slider ---------- */
+ /* ---------- section --------------- */
+.list-item{
+    position: relative;
+}
+.list button{
+  border-radius: 7px;
+}
+.desc-item{
+    height: 170px;
+}
+.desc {
+    background-color: var(--th-color);
+    position: absolute;
+    width: 97%;
+    left: 2%;
+    bottom: 7%;
+    height: 15%;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.desc::before,.desc::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -14%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 0;
+    border-color: transparent var(--th-color) transparent transparent;
+    transition: all 0.3s;
+}
+.desc::after{
+    right: 0;
+    border-color: transparent transparent var(--th-color) transparent;
+    transform: rotate(90deg);
+}
+.desc:hover{
+    background-color: var(--mainColor);
+}
+.desc:hover.desc::after{
+    border-color: transparent transparent var(--mainColor) transparent;
+}
+.desc:hover.desc::before{
+    border-color: transparent var(--mainColor) transparent transparent;
+}
+.flight{
+    transform: rotate(-90deg);
+    position: relative;
+}
+.list span i{
+  font-size: 26px;
+
+}
+.flight i{
+  transform: translatey(12px);
+  font-size: 26px;
+}
+.flight::before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    width: 80%;
+    height: 2px;
+    top: 6%;
+    left: 22%;
+}
+.form-item{
+    position: relative;
+}
+.trip::after {
+    content: "";
+    left: 20%!important;
+}
+form.filter h4 span{
+    color: var(--mainColor);
+}
+footer{
+    color: darkgrey;
+    background-color: var(--s-color);
+}
+footer p span{
+    color: var(--mainColor);
+}
+footer ul li a{
+    color: darkgrey;
+    font-size: 20px;
+}
+footer ul.follow li{
+    list-style: none;
+}
+footer ul.follow li span{
+    color: white;
+    background-color: darkgrey;
+    height: 33px;
+    width: 33px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    line-height: 35px;
+}
+footer ul.follow li span:hover {
+    background-color: var(--mainColor);
+}
+footer ul li a:hover{
+    color: var(--mainColor);
+}
+form.sign{
+    position: relative;
+    width: fit-content!important;
+}
+form.sign input{
+    padding: 7px 0;
+    padding-right: 13px;
+    width: 200px;
+    border-radius: 0px 20px 20px 0px;
+    border: 1px solid #e2e6ea;
+
+}
+form.sign button{
+    height: 100%;
+    left: -88px;
+    width: 88px;
+    top: 0;
+    background-color: var(--mainColor);
+    border: 0;
+    position: absolute;
+    border-radius: 20px 0px 0px 20px;
+    color: white;
+}
+footer a:hover{
+    text-decoration: none;
+    color: unset;
+}
+
+/* ======== details ========= */
+
+section.details .details-line{
+    height: 1px;
+    width: 100%;
+    background-color: var(--mainColor);
+}
+section.details table th{
+    background-color: #E9E6E0;
+}
+section.details table th, table tr{
+    border: 1px solid darkgrey;
+}
+section.details h1{
+    color: var(--mainColor);
+}
+.trip_info {
+    position: relative;
+}
+.trip_info ul.listed-info li {
+    background-color: var(--s-color);
+    margin: 10px 0 ;
+    padding: 0 5px;
+    position: relative;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+    width: 95%;
+}
+.trip_info ul.listed-info li a{
+    display: inline-block;
+    width: 100%;
+}
+.list-active{
+    background-color: var(--mainColor)!important;
+    width: 100%!important;
+}
+.list-active::after {
+    content: "";
+    position: absolute;
+    left: -42px;
+    width: 18px;
+    height: 93%;
+    border-width: 21px;
+    border-style: solid;
+    border-color: transparent var(--mainColor) transparent transparent;
+    top: -1px;
+    z-index: 9;
+}
+.tour h4, .tour p{
+    color: var(--th-color);
+}
+.tour h5{
+    color: var(--mainColor);
+    font-weight: bolder;
+}
+.pagination>li>a {
+     border-radius: 50% !important;
+     margin: 0 5px;
+    color: var(--mainColor)!important;
+    }
+    .page-item.active .page-link {
+        z-index: 3;
+        color: white!important;
+        background-color: var(--mainColor);
+        border-color: var(--mainColor);
+    }
+/* -----------end details -------------- */
+/* ----------- about --------------- */
+.testimonial .carousel-inner img{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.carousel-inner{
+    width: fit-content;
+    margin: 0 auto;
+}
+/* -----------end about --------------- */
+/* ====== media screen ===== */
+@media(max-width:1250px) {
+    .range-slider input[type="range"] {
+        top: 53px;
+    }
+}
+@media(max-width:992px) {
+    .range-slider input[type="range"] {
+        top: 30px;
+        left: 42px;
+    }
+    .range-slider:nth-last-child(2){
+        margin-top: 40px!important;
+    }
+    .trip_info ul.listed-info li{
+        width: 99%;
+    }
+    .list-active::after{
+        display: none;
+    }
+    .tour-line{
+        display: none;
+    }
+    #hotels{
+        text-align: center;
+    }
+}
+@media(max-width:980px) {
+    form .form-item::after{
+        display: none;
+        content: "";
+    }
+    section.details{
+        width: 100%!important;
+    }
+    .tour{
+        margin-top: 20px;
+        padding: 0;
+    }
+}
+@media(max-width:768px) {
+    .range-slider input[type="range"] {
+        top: 32px;
+        left: 23px;
+    }
+    .flight i {
+        transform: translate(-5px,14px);
+        font-size: 26px;
+    }
+}
+@media(max-width:580px) {
+    form.filter button {
+        left: 25%;
+    }
+    .flight i {
+        transform: translate(-16px,14px);
+        font-size: 26px;
+    }
+}
+
+
+
+
+
+
+

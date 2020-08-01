@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap-rtl.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <!-- datepicker -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <!-- font-family -->
+    <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
+    <!-- custom style -->
+    <link rel="stylesheet" href="css/custome.css">
+    <style>
+        :root{
+            --mainColor:#26606af0;
+        }
+    </style>
+    
+</head>
+<body dir="rtl" class="">
+    <header>
+        <div class="overlay">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <div class="container">
+                    <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">الرئيسيه <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="details.html">الرحلات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="details.html">الفنادق</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">الخدمات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">المدونه</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">عنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">الاتصال بنا</a>
+                    </li>
+                  
+                    </ul>
+                </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="form ">
+        <div class="container">
+            <form action="item.php" class="py-3 filter" method="POST">
+                <div class="row justify-content-between col-md-12 flex-wrap">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <h4 class="text-white">الرحله</h4>
+                        <select name="" id="" class="w-100">
+                            <option value="">رحله جويه</option>
+                            <option value="">رحله بحريه</option>
+                            <option value="">رحله جويه</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <h4 class="text-white">الوجهه</h4>
+                        <select name="" id="" class="w-100">
+                            <option value="باريس">باريس</option>
+                            <option value="لندن">لندن</option>
+                            <option value="باريس">باريس</option>
+                            <option value="لندن">لندن</option>
+                            <option value="باريس">باريس</option>
+                            <option value="لندن">لندن</option>
+                            <option value="باريس">باريس</option>
+                            <option value="لندن">لندن</option>
+                        </select>
+                    </div>
+                    <div class="duration col-lg-6 col-md-12 col-sm-12 ">
+                        <h4 class="text-white"> الفتره</h4>
+                        <div class="d-flex justify-content-between">
+                            <input  type="text" id="datepicker" placeholder="من" class="" name="durFrom" autocomplete="off">
+                            <input id="datepicker-to" type="text" placeholder="الي" class="" name="durTo" autocomplete="off">      
+                        </div> 
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 hotel mt-4">
+                        <h4 class="text-white"> الفندق</h4>
+                        <select name="" id="" class="w-100">
+                            <option value="باريس">خمس نجوم</option>
+                            <option value="لندن">اربع نجوم</option>
+                            <option value="باريس">ثلاث نجوم</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3 mt-4 range-slider ">
+                        <h5 class="d-inline">المده:</h5>
+                        <span class="rangeValues  mb-4" id="rangeVal"></span>  
+                        <span class="range-sec-slide" id="rangeval2"></span>
+                        <input value="10" min="10" max="100"   type="range" class="f-input">
+                        <input value="1000" min="100" max="1000"  type="range" class="f-input">
+                    </div>
+                    <div class="col-lg-3 mt-4 range-slider">
+                        <h5 class="d-inline">السعر:</h5>
+                        <span class="rangeValues  mb-4" id="rangeVal"></span>  
+                        <span class="range-sec-slide" id="rangeval2"></span>
+                        <input value="10" min="10" max="100"   type="range" class="s-input">
+                        <input value="10000" min="100" max="10000"  type="range" class="s-input">
+                    </div>
+ 
+                    <div class="col-lg-3 mt-4">
+                        <button type="submit" class="w-100 btn text-white"  style="margin-top: 30px; background-color: var(--mainColor);">النتيجه</button>
+                    </div>
+                </div>
+            </form>
+        </div>   
+    </section>
+    <section class="list py-5 ">
+        <div class="container mx-auto">
+            <div class="row flex-wrap">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 list-item my-3">
+                    <div class="img-holder">
+                        <img src="img/paris.jpg" class="w-100" alt="">
+                    </div>
+                    <div class="desc-item bg-white">
+                        <div class="details d-flex pt-2 pb-5 pr-5 justify-content-between">
+                           <div class="col-md-8">
+                                <h5>باريس</h5>
+                                <p class="text-secondary">1529 فندق</p>
+                           </div>
+                           <div class="col-md-4 mt-2 text-left">
+                               <button type="" class="cyan px-3 py-1 btn font-weight-bold"><a href="details.html" class="text-white">التفاصيل</a></button>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="desc d-flex text-white py-1">
+                        <p class="col-md-4 text-dark font-weight-bold"><span class="font-weight-bold text-white">من</span><br>150EGP</p>
+                        <span class="col-md-2 d-flex flex-column-reverse mt-3  flight p-0"><i class="fas fa-plane fa-2x"></i></span>
+                        <p class="col-md-4 text-dark font-weight-bold"><span class="font-weight-bold text-white">من</span><br>150EGP</p>
+                        <span class="col-md-2 p-0 mt-2"><i class="fas fa-hotel fa-2x"></i></span>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 list-item my-3">
+                    <div class="img-holder">
+                        <img src="img/amsterdam.jpg" class="w-100" alt="">
+                    </div>
+                    <div class="desc-item bg-white">
+                        <div class="details d-flex pt-2 pb-5 pr-5 justify-content-between">
+                           <div class="col-md-8">
+                                <h5>باريس</h5>
+                                <p class="text-secondary">1529 فندق</p>
+                           </div>
+                           <div class="col-md-4 mt-2 text-left">
+                               <button type="" class="cyan px-3 py-1 btn font-weight-bold"><a href="details.html" class="text-white">التفاصيل</a></button>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="desc d-flex text-white py-1">
+                        <p class="col-md-4 text-dark font-weight-bold"><span class="font-weight-bold text-white">من</span><br>150EGP</p>
+                        <span class="col-md-2 d-flex flex-column-reverse mt-3  flight p-0"><i class="fas fa-plane fa-2x"></i></span>
+                        <p class="col-md-4 text-dark font-weight-bold"><span class="font-weight-bold text-white">من</span><br>150EGP</p>
+                        <span class="col-md-2 p-0 mt-2"><i class="fas fa-hotel fa-2x"></i></span>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 list-item my-3">
+                    <div class="img-holder">
+                        <img src="img/london1.jpg" class="w-100" alt="">
+                    </div>
+                    <div class="desc-item bg-white">
+                        <div class="details d-flex pt-2 pb-5 pr-5 justify-content-between">
+                           <div class="col-md-8">
+                                <h5>باريس</h5>
+                                <p class="text-secondary">1529 فندق</p>
+                           </div>
+                           <div class="col-md-4 mt-2 text-left">
+                               <button type="" class="cyan px-3 py-1 btn font-weight-bold"><a href="details.html" class="text-white">التفاصيل</a></button>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="desc d-flex text-white py-1">
+                        <p class="col-md-4 text-dark font-weight-bold"><span class="font-weight-bold text-white">من</span><br>150EGP</p>
+                        <span class="col-md-2 d-flex flex-column-reverse mt-3  flight p-0"><i class="fas fa-plane fa-2x"></i></span>
+                        <p class="col-md-4 text-dark font-weight-bold"><span class="font-weight-bold text-white">من</span><br>150EGP</p>
+                        <span class="col-md-2 p-0 mt-2"><i class="fas fa-hotel fa-2x"></i></span>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 list-item my-3">
+                    <div class="img-holder">
+                        <img src="img/prague (1).jpg" class="w-100" alt="">
+                    </div>
+                    <div class="desc-item bg-white">
+                        <div class="details d-flex pt-2 pb-5 pr-5 justify-content-between">
+                           <div class="col-md-8">
+                                <h5>باريس</h5>
+                                <p class="text-secondary">1529 فندق</p>
+                           </div>
+                           <div class="col-md-4 mt-2 text-left">
+                               <button type="" class="cyan px-3 py-1 btn font-weight-bold"><a href="details.html" class="text-white">التفاصيل</a></button>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="desc d-flex text-white py-1">
+                        <p class="col-md-4 text-dark font-weight-bold"><span class="font-weight-bold text-white">من</span><br>150EGP</p>
+                        <span class="col-md-2 d-flex flex-column-reverse mt-3  flight p-0"><i class="fas fa-plane fa-2x"></i></span>
+                        <p class="col-md-4 text-dark font-weight-bold"><span class="font-weight-bold text-white">من</span><br>150EGP</p>
+                        <span class="col-md-2 p-0 mt-2"><i class="fas fa-hotel fa-2x"></i></span>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 list-item my-3">
+                    <div class="img-holder">
+                        <img src="img/saint-petersburg.jpg" class="w-100" alt="">
+                    </div>
+                    <div class="desc-item bg-white">
+                        <div class="details d-flex pt-2 pb-5 pr-5 justify-content-between">
+                           <div class="col-md-8">
+                                <h5>باريس</h5>
+                                <p class="text-secondary">1529 فندق</p>
+                           </div>
+                           <div class="col-md-4 mt-2 text-left">
+                               <button type="" class="cyan px-3 py-1 btn font-weight-bold"><a href="details.html" class="text-white">التفاصيل</a></button>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="desc d-flex text-white py-1">
+                        <p class="col-md-4 text-dark font-weight-bold"><span class="font-weight-bold text-white">من</span><br>150EGP</p>
+                        <span class="col-md-2 d-flex flex-column-reverse mt-3  flight p-0"><i class="fas fa-plane fa-2x"></i></span>
+                        <p class="col-md-4 text-dark font-weight-bold"><span class="font-weight-bold text-white">من</span><br>150EGP</p>
+                        <span class="col-md-2 p-0 mt-2"><i class="fas fa-hotel fa-2x"></i></span>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 list-item my-3">
+                    <div class="img-holder">
+                        <img src="img/photo-1512470876302-972faa2aa9a4.jfif" class="w-100" alt="">
+                    </div>
+                    <div class="desc-item bg-white">
+                        <div class="details d-flex pt-2 pb-5 pr-5 justify-content-between">
+                           <div class="col-md-8">
+                                <h5>باريس</h5>
+                                <p class="text-secondary">1529 فندق</p>
+                           </div>
+                           <div class="col-md-4 mt-2 text-left">
+                               <button type="" class="cyan px-3 py-1 btn font-weight-bold"><a href="details.html" class="text-white">التفاصيل</a></button>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="desc d-flex text-white py-1">
+                        <p class="col-md-4 text-dark font-weight-bold"><span class="font-weight-bold text-white">من</span><br>150EGP</p>
+                        <span class="col-md-2 d-flex flex-column-reverse mt-3  flight p-0"><i class="fas fa-plane fa-2x"></i></span>
+                        <p class="col-md-4 text-dark font-weight-bold"><span class="font-weight-bold text-white">من</span><br>150EGP</p>
+                        <span class="col-md-2 p-0 mt-2"><i class="fas fa-hotel fa-2x"></i></span>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 list-item my-3">
+                    <div class="img-holder">
+                        <img src="img/prague.jpg" class="w-100" alt="">
+                    </div>
+                    <div class="desc-item bg-white">
+                        <div class="details d-flex pt-2 pb-5 pr-5 justify-content-between">
+                           <div class="col-md-8">
+                                <h5>باريس</h5>
+                                <p class="text-secondary">1529 فندق</p>
+                           </div>
+                           <div class="col-md-4 mt-2 text-left">
+                               <button type="" class="cyan px-3 py-1 btn font-weight-bold"><a href="details.html" class="text-white">التفاصيل</a></button>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="desc d-flex text-white py-1">
+                        <p class="col-md-4 text-dark font-weight-bold"><span class="font-weight-bold text-white">من</span><br>150EGP</p>
+                        <span class="col-md-2 d-flex flex-column-reverse mt-3  flight p-0"><i class="fas fa-plane fa-2x"></i></span>
+                        <p class="col-md-4 text-dark font-weight-bold"><span class="font-weight-bold text-white">من</span><br>150EGP</p>
+                        <span class="col-md-2 p-0 mt-2"><i class="fas fa-hotel fa-2x"></i></span>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 list-item my-3">
+                    <div class="img-holder">
+                        <img src="img/paris.jpg" class="w-100" alt="">
+                    </div>
+                    <div class="desc-item bg-white">
+                        <div class="details d-flex pt-2 pb-5 pr-5 justify-content-between">
+                           <div class="col-md-8">
+                                <h5>باريس</h5>
+                                <p class="text-secondary">1529 فندق</p>
+                           </div>
+                           <div class="col-md-4 mt-2 text-left">
+                               <button type="" class="cyan px-3 py-1 btn font-weight-bold"><a href="details.html" class="text-white">التفاصيل</a></button>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="desc d-flex text-white py-1">
+                        <p class="col-md-4 text-dark font-weight-bold"><span class="font-weight-bold text-white">من</span><br>150EGP</p>
+                        <span class="col-md-2 d-flex flex-column-reverse mt-3  flight p-0"><i class="fas fa-plane fa-2x"></i></span>
+                        <p class="col-md-4 text-dark font-weight-bold"><span class="font-weight-bold text-white">من</span><br>150EGP</p>
+                        <span class="col-md-2 p-0 mt-2"><i class="fas fa-hotel fa-2x"></i></span>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 list-item my-3">
+                    <div class="img-holder">
+                        <img src="img/amsterdam.jpg" class="w-100" alt="">
+                    </div>
+                    <div class="desc-item bg-white">
+                        <div class="details d-flex pt-2 pb-5 pr-5 justify-content-between">
+                           <div class="col-md-8">
+                                <h5>باريس</h5>
+                                <p class="text-secondary">1529 فندق</p>
+                           </div>
+                           <div class="col-md-4 mt-2 text-left">
+                               <button type="" class="cyan px-3 py-1 btn font-weight-bold"><a href="details.html" class="text-white">التفاصيل</a></button>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="desc d-flex text-white py-1">
+                        <p class="col-md-4 text-dark font-weight-bold"><span class="font-weight-bold text-white">من</span><br>150EGP</p>
+                        <span class="col-md-2 d-flex flex-column-reverse mt-3  flight p-0"><i class="fas fa-plane fa-2x"></i></span>
+                        <p class="col-md-4 text-dark font-weight-bold"><span class="font-weight-bold text-white">من</span><br>150EGP</p>
+                        <span class="col-md-2 p-0 mt-2"><i class="fas fa-hotel fa-2x"></i></span>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 list-item my-3">
+                    <div class="img-holder">
+                        <img src="img/london1.jpg" class="w-100" alt="">
+                    </div>
+                    <div class="desc-item bg-white">
+                        <div class="details d-flex pt-2 pb-5 pr-5 justify-content-between">
+                           <div class="col-md-8">
+                                <h5>باريس</h5>
+                                <p class="text-secondary">1529 فندق</p>
+                           </div>
+                           <div class="col-md-4 mt-2 text-left">
+                               <button type="" class="cyan px-3 py-1 btn font-weight-bold"><a href="details.html" class="text-white">التفاصيل</a></button>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="desc d-flex text-white py-1">
+                        <p class="col-md-4 text-dark font-weight-bold"><span class="font-weight-bold text-white">من</span><br>150EGP</p>
+                        <span class="col-md-2 d-flex flex-column-reverse mt-3  flight p-0"><i class="fas fa-plane fa-2x"></i></span>
+                        <p class="col-md-4 text-dark font-weight-bold"><span class="font-weight-bold text-white">من</span><br>150EGP</p>
+                        <span class="col-md-2 p-0 mt-2"><i class="fas fa-hotel fa-2x"></i></span>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 list-item my-3">
+                    <div class="img-holder">
+                        <img src="img/prague (1).jpg" class="w-100" alt="">
+                    </div>
+                    <div class="desc-item bg-white">
+                        <div class="details d-flex pt-2 pb-5 pr-5 justify-content-between">
+                           <div class="col-md-8">
+                                <h5>باريس</h5>
+                                <p class="text-secondary">1529 فندق</p>
+                           </div>
+                           <div class="col-md-4 mt-2 text-left">
+                               <button type="" class="cyan px-3 py-1 btn font-weight-bold"><a href="details.html" class="text-white">التفاصيل</a></button>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="desc d-flex text-white py-1">
+                        <p class="col-md-4 text-dark font-weight-bold"><span class="font-weight-bold text-white">من</span><br>150EGP</p>
+                        <span class="col-md-2 d-flex flex-column-reverse mt-3  flight p-0"><i class="fas fa-plane fa-2x"></i></span>
+                        <p class="col-md-4 text-dark font-weight-bold"><span class="font-weight-bold text-white">من</span><br>150EGP</p>
+                        <span class="col-md-2 p-0 mt-2"><i class="fas fa-hotel fa-2x"></i></span>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 list-item my-3">
+                    <div class="img-holder">
+                        <img src="img/saint-petersburg.jpg" class="w-100" alt="">
+                    </div>
+                    <div class="desc-item bg-white">
+                        <div class="details d-flex pt-2 pb-5 pr-5 justify-content-between">
+                           <div class="col-md-8">
+                                <h5>باريس</h5>
+                                <p class="text-secondary">1529 فندق</p>
+                           </div>
+                           <div class="col-md-4 mt-2 text-left">
+                               <button type="" class="cyan px-3 py-1 btn font-weight-bold"><a href="details.html" class="text-white">التفاصيل</a></button>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="desc d-flex text-white py-1">
+                        <p class="col-md-4 text-dark font-weight-bold"><span class="font-weight-bold text-white">من</span><br>150EGP</p>
+                        <span class="col-md-2 d-flex flex-column-reverse mt-3  flight p-0"><i class="fas fa-plane fa-2x"></i></span>
+                        <p class="col-md-4 text-dark font-weight-bold"><span class="font-weight-bold text-white">من</span><br>150EGP</p>
+                        <span class="col-md-2 p-0 mt-2"><i class="fas fa-hotel fa-2x"></i></span>
+                    </div>
+                </div>               
+            </div>
+        </div>
+    </section>
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-6 col-md-12 mb-3">
+                    <h4 class="font-weight-bolder mb-4"> احجز رحلتك </h4>
+                    <p><span><i class="fas fa-phone"></i> :</span> 0106677786 </p>
+                    <p><span><i class="fas fa-map-marker-alt"></i> :</span> القاهره-العنوان </p>
+                    <p><span><i class="fas fa-envelope"></i> :</span>booking@mail.com</p>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-12 mb-3">
+                    <h4 class="font-weight-bolder mb-4"> خدمة العملاء </h4>
+                    <ul>
+                        <li><a href="">التعليمات</a></li>
+                        <li><a href="">كيف اقوم بالدفع ؟</a></li>
+                        <li><a href=""> خيارات الدفع</a></li>
+                        <li><a href=""> نصائح الحجز</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-12 mb-3">
+                    <h4 class="font-weight-bolder mb-4">تابعنا </h4>
+                    <ul class="follow d-flex">
+                        <li><a href="" title="facebook"><span class="mr-2"><i class="fab fa-facebook-f"></i></span></a></li>
+                        <li><a href="" title="Gplus"><span class="mr-2"><i class="fab fa-google-plus-g"></i></span></a></li>
+                        <li><a href="" title="linkedin"><span class="mr-2"><i class="fab fa-linkedin-in"></i></span></a></li>
+                        <li><a href="" title="twittter"><span class="mr-2"><i class="fab fa-twitter"></i></span></a></li>
+                        <li><a href="" title="whatsapp"><span class="mr-2"><i class="fab fa-whatsapp"></i></span></a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-12 mb-3">
+                    <h4 class="font-weight-bolder mb-4">لا تفوت عروضنا الحصرية</h4>
+                    <form class="sign">
+                        <input type="text" placeholder="ادخل البريد الالكتروني">
+                        <button type="submit">تسجيل</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- datepicker -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- custome.js -->
+    <script src="js/custome.js"></script>
+
+</body>
+</html>
